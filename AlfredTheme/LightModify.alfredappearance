@@ -4,22 +4,22 @@
       "textSpacing" : 6,
       "subtext" : {
         "size" : 12,
-        "colorSelected" : "#FFFFFFCB",
-        "font" : "System",
-        "color" : "#FFFFFF7E"
-      },
-      "shortcut" : {
-        "size" : 16,
         "colorSelected" : "#FFFFFFFF",
         "font" : "System",
-        "color" : "#FFFFFF7E"
+        "color" : "#0000007E"
       },
-      "backgroundSelected" : "#4A55AE7F",
+      "shortcut" : {
+        "size" : 15,
+        "colorSelected" : "#000000FF",
+        "font" : "System",
+        "color" : "#0000007E"
+      },
+      "backgroundSelected" : "#4F5CBEFF",
       "text" : {
         "size" : 18,
         "colorSelected" : "#FFFFFFFF",
         "font" : "System",
-        "color" : "#FFFFFFCB"
+        "color" : "#000000CB"
       },
       "iconPaddingHorizontal" : 7,
       "roundness" : 8,
@@ -27,21 +27,21 @@
       "iconSize" : 40
     },
     "search" : {
-      "backgroundSelected" : "#A300F33B",
+      "backgroundSelected" : "#1803243B",
       "paddingHorizontal" : 10,
       "spacing" : 9,
       "text" : {
         "size" : 36,
         "colorSelected" : "#FFFFFFFF",
         "font" : "System Light",
-        "color" : "#FFFFFFFF"
+        "color" : "#000000FF"
       },
       "background" : "#5C595B53",
       "roundness" : 8,
       "paddingVertical" : 6
     },
     "window" : {
-      "color" : "#2C2D2FF7",
+      "color" : "#C8C8D0F7",
       "paddingHorizontal" : 9,
       "width" : 600,
       "borderPadding" : 0,
@@ -50,7 +50,7 @@
       "roundness" : 15,
       "paddingVertical" : 9
     },
-    "credit" : "Linonon",
+    "credit" : "linonon",
     "separator" : {
       "color" : "#CBCBCBF3",
       "thickness" : 0
@@ -59,6 +59,6 @@
       "color" : "#4A55AE7F",
       "thickness" : 2
     },
-    "name" : "MordenDarkModify"
+    "name" : "LightModify"
   }
 }

@@ -9,8 +9,9 @@
 3. Agent add ssh-key
     - `ssh-add` or `ssh-add ~/.ssh/id_rsa"`
 
-4. Copy ssh-key to clipboard
-    - `pbcopy < ~/.ssh/id_rsa_pub`
-
-5. Git setting ssh-key
+4. Git setting ssh-key
     - Go to `github`'s `setting` -> `SSH and GPG keys`
+
+5. Copy ssh-key to clipboard, then paste
+    - `pbcopy < ~/.ssh/id_rsa_pub`
+    - paste to `SSH and GPG keys`
