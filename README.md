@@ -4,4 +4,4 @@
 
 - [SSH-Setting](https://github.com/linonon/MyMacConfig/blob/main/doc/ssh.md)
 
-- [Vim aliases](https://github.com/linonon/MyMacConfig/blob/main/doc/vim-alias.md)
+- [zsh aliases](https://github.com/linonon/MyMacConfig/blob/main/doc/vim-alias.md)

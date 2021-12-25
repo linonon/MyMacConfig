@@ -1,4 +1,4 @@
-# Vim's Alisaes
+# zsh's Alisaes
 
 ## System
 ```vim
