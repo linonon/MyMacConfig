@@ -4,9 +4,9 @@
 ```vim
 # System aliases
 alias cl="clear && printf '\e[3J'"
-alias zshv="vim ~/.zshrc"
-alias zshs="source ~/.zshrc"
 alias cdw="cd ~/Workspace"
+alias vimz="vim ~/.zshrc"
+alias souz="source ~/.zshrc"
 ```
 
 ## Go
