@@ -30,6 +30,7 @@ alias vimz="vim ~/.zshrc"
 alias souz="source ~/.zshrc"
 
 ### Custom aliases
+alias mymacconfig="cd /Users/linonon/Workspace/MyMacConfig"
 alias pushz="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md && cd ~/Workspace/MyMacConfig && git add . && git commit -m 'DOC: Update zshrc' && git push && cd -"
 
 ### DB aliases
