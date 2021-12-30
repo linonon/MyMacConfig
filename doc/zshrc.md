@@ -19,6 +19,7 @@ ZSH_THEME="robbyrussell"
 ### Add wisely, as too many plugins slow down shell startup.
 ### std: $ZSH/plugins; custom: $ZSH_CUTSOM/plugins/
 ### plugins=(git)
+plugins=(cdgame)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,19 +40,6 @@ alias gob="go build ."
 alias gomi="go mod init"
 alias gor="go run ."
 alias gog="go get ."
-
-### Game's cmd positions aliases
-alias mydemo="cd ~/Workspace/game/slot_demo"
-alias mymacconfig="cd /Users/linonon/Workspace/MyMacConfig"
-
-alias breakaway="cd ~/Workspace/game/slot03/src"
-alias candyparty="cd ~/Workspace/game/slot04/src"
-alias firejoker="cd ~/Workspace/game/slot05/src"
-alias slot3="breakaway"
-alias slot4="candyparty"
-alias slot5="firejoker"
-
-alias lieng="cd /Users/linonon/Workspace/game/lieng/src"
 
 ### How to Use
 ### `cp -R ./zshrc.md ~/.zshrc`
