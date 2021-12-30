@@ -7,3 +7,9 @@
 - [zsh aliases](https://github.com/linonon/MyMacConfig/blob/main/doc/zsh-alias.md)
 
 - [Font](https://github.com/linonon/MyMacConfig/blob/main/doc/font.md)
+
+- App
+    - Alfred
+    - Bartender
+    - Lemon
+    
