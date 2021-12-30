@@ -113,7 +113,8 @@ source $ZSH/oh-my-zsh.sh
 alias cl="clear && printf '\e[3J'"
 alias cdw="cd ~/Workspace"
 alias vimz="vim ~/.zshrc"
-alias souz="source ~/.zshrc"
+alias souz="source ~/.zshrc; cp -R ~/.zshrc /Users/linonon/Workspace/MyMacConfig/zshrc/zshrc-company"
+alias pushmymacconfig="cd ~/Workspace/MyMacConfig; git push; cd -"
 
 # DB aliases
 alias start-mongo="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
@@ -128,7 +129,13 @@ alias gog="go get ."
 
 # Game's cmd positions aliases
 alias mydemo="cd ~/Workspace/game/slot_demo"
-alias candyparty="cd ~/Workspace/game/slot04/src/."
-alias firejoker="cd ~/Workspace/game/slot05/src/."
+alias mymacconfig="cd /Users/linonon/Workspace/MyMacConfig"
+
+alias breakaway="cd ~/Workspace/game/slot03/src"
+alias candyparty="cd ~/Workspace/game/slot04/src"
+alias firejoker="cd ~/Workspace/game/slot05/src"
+alias slot03="breakaway"
+alias slot04="candyparty"
+alias slot05="firejoker"
+
 alias lieng="cd /Users/linonon/Workspace/game/lieng/src"
-alias breakaway="cd /Users/linonon/Workspace/game/slot03/src"
