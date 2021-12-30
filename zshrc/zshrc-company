@@ -1,4 +1,3 @@
-# If you come from bash you might have to change your $PATH.
 # Protobuf
 export PROTOBUF=/usr/local/Cellar/protobuf
 
@@ -23,17 +22,12 @@ ZSH_THEME="robbyrussell"
 
 source $ZSH/oh-my-zsh.sh
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # System aliases
 alias cl="clear && printf '\e[3J'"
 alias cdw="cd ~/Workspace"
 alias vimz="vim ~/.zshrc"
 alias souz="source ~/.zshrc; cp -R ~/.zshrc /Users/linonon/Workspace/MyMacConfig/zshrc/zshrc-company"
-alias pushMyMacConfig="cd ~/Workspace/MyMacConfig; gitpushMyMacConfig; cd -"
-alias gitpushMyMacConfig="git add .; git commit -m 'DOC: Update zshrc'; git push"
+alias pushMyMacConfig="cd ~/Workspace/MyMacConfig && git add . && git commit -m 'DOC: Update zshrc' && git push && cd -"
 
 # DB aliases
 alias start-mongo="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
