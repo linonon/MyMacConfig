@@ -10,7 +10,7 @@ export GOPRIVATE="talent.com/server"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/Cellar/mysql@5.7/5.7.36/bin
 
-# Path to your oh-my-zsh installation.
+# ZSH PATH
 export ZSH="/Users/linonon/.oh-my-zsh"
 
 # ZSH theme
@@ -18,7 +18,7 @@ ZSH_THEME="robbyrussell"
 
 # Add wisely, as too many plugins slow down shell startup.
 # std: $ZSH/plugins; custom: $ZSH_CUTSOM/plugins/
-#plugins=(git)
+# plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
