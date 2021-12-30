@@ -1,3 +1,5 @@
+# How to Use: `cp -R ./zshrc.md ~/.zshrc`
+
 # Protobuf
 export PROTOBUF=/usr/local/Cellar/protobuf
 
