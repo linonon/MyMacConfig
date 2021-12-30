@@ -4,7 +4,7 @@
 
 - [SSH-Setting](doc/ssh.md)
 
-- [zsh aliases](./zshrc)
+- [zsh aliases](doc/zshrc.md)
 
 - [Font](doc/font.md)
 
