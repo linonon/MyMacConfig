@@ -28,7 +28,9 @@ alias cl="clear && printf '\e[3J'"
 alias cdw="cd ~/Workspace"
 alias vimz="vim ~/.zshrc"
 alias souz="source ~/.zshrc"
-alias pushMyMacConfig="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md && cd ~/Workspace/MyMacConfig && git add . && git commit -m 'DOC: Update zshrc' && git push && cd -"
+
+### Custom aliases
+alias pushz="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md && cd ~/Workspace/MyMacConfig && git add . && git commit -m 'DOC: Update zshrc' && git push && cd -"
 
 ### DB aliases
 alias start-mongo="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
