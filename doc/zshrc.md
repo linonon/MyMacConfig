@@ -1,5 +1,3 @@
-# How to Use: `cp -R ./zshrc.md ~/.zshrc`
-
 # Protobuf
 export PROTOBUF=/usr/local/Cellar/protobuf
 
@@ -54,3 +52,6 @@ alias slot04="candyparty"
 alias slot05="firejoker"
 
 alias lieng="cd /Users/linonon/Workspace/game/lieng/src"
+
+### How to Use
+### `cp -R ./zshrc.md ~/.zshrc`
