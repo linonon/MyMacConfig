@@ -47,9 +47,9 @@ alias mymacconfig="cd /Users/linonon/Workspace/MyMacConfig"
 alias breakaway="cd ~/Workspace/game/slot03/src"
 alias candyparty="cd ~/Workspace/game/slot04/src"
 alias firejoker="cd ~/Workspace/game/slot05/src"
-alias slot03="breakaway"
-alias slot04="candyparty"
-alias slot05="firejoker"
+alias slot3="breakaway"
+alias slot4="candyparty"
+alias slot5="firejoker"
 
 alias lieng="cd /Users/linonon/Workspace/game/lieng/src"
 
