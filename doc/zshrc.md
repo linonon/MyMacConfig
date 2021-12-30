@@ -26,8 +26,8 @@ source $ZSH/oh-my-zsh.sh
 alias cl="clear && printf '\e[3J'"
 alias cdw="cd ~/Workspace"
 alias vimz="vim ~/.zshrc"
-alias souz="source ~/.zshrc; cp -R ~/.zshrc /Users/linonon/Workspace/MyMacConfig/doc/zshrc.md"
-alias pushMyMacConfig="cd ~/Workspace/MyMacConfig && git add . && git commit -m 'DOC: Update zshrc' && git push && cd -"
+alias souz="source ~/.zshrc"
+alias pushMyMacConfig="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md && cd ~/Workspace/MyMacConfig && git add . && git commit -m 'DOC: Update zshrc' && git push && cd -"
 
 ### DB aliases
 alias start-mongo="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
