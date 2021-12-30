@@ -13,3 +13,7 @@
     - Bartender
     - Lemon
     
+- ~/.vimrc
+    - set mouse=a
+    - set clipboard=unnamed
+
