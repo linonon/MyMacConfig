@@ -33,7 +33,7 @@ alias cdw="cd ~/Workspace"
 alias vimz="vim ~/.zshrc"
 alias souz="source ~/.zshrc; cp -R ~/.zshrc /Users/linonon/Workspace/MyMacConfig/zshrc/zshrc-company"
 alias pushMyMacConfig="cd ~/Workspace/MyMacConfig; gitpushMyMacConfig; cd -"
-alias gitpushMyMacConfig="git pull --tags origin main; git push origin main:main"
+alias gitpushMyMacConfig="git add .;git commit -m "DOC: Update zshrc"; git push"
 
 # DB aliases
 alias start-mongo="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
