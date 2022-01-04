@@ -28,6 +28,8 @@ alias cl="clear && printf '\e[3J'"
 alias vimz="vim ~/.zshrc"
 alias souz="source ~/.zshrc"
 alias vimv="vim ~/.vimrc"
+alias c.="code ."
+alias c.e="code . && exit"
 
 ### CD aliases
 alias cdw="cd ~/Workspace"
