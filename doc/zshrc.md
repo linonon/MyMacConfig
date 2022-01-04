@@ -25,17 +25,18 @@ source $ZSH/oh-my-zsh.sh
 
 ### System aliases
 alias cl="clear && printf '\e[3J'"
-alias cdw="cd ~/Workspace"
 alias vimz="vim ~/.zshrc"
 alias souz="source ~/.zshrc"
 alias vimv="vim ~/.vimrc"
 
-### Custom aliases
+### CD aliases
+alias cdw="cd ~/Workspace"
 alias mymacconfig="cd /Users/linonon/Workspace/MyMacConfig"
+alias learngo="cd ~/Workspace/Learn-go"
+
+### Custom aliases
 alias updatez="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
-
 alias updatev="cp -R ~/.vimrc ~/Workspace/MyMacConfig/doc/vimrc.md"
-
 alias pushc="updatez && updatev && cd ~/Workspace/MyMacConfig && git pull && git add . && git commit -m 'DOC: Update Mac config' && git push && cd -"
 
 ### DB aliases
