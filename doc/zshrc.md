@@ -41,7 +41,7 @@ alias pushc="updatez && updatev && cd ~/Workspace/MyMacConfig && git add . && gi
 ### DB aliases
 alias start-mongo="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
 alias start-mysql="mysql.server start"
-alias start-redis="redis-serve"
+alias start-redis="redis-server"
 
 ### Go aliases
 alias gob="go build ."
