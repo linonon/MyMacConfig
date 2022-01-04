@@ -36,7 +36,7 @@ alias updatez="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
 
 alias updatev="cp -R ~/.vimrc ~/Workspace/MyMacConfig/doc/vimrc.md"
 
-alias pushc="updatez && updatev && cd ~/Workspace/MyMacConfig && git add . && git commit -m 'DOC: Update Mac config' && git push && cd -"
+alias pushc="updatez && updatev && cd ~/Workspace/MyMacConfig && git pull && git add . && git commit -m 'DOC: Update Mac config' && git push && cd -"
 
 ### DB aliases
 alias start-mongo="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
