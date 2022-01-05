@@ -34,7 +34,7 @@ alias c.e="code . && exit"
 ### CD aliases
 alias cdw="cd ~/Workspace"
 alias mymacconfig="cd /Users/linonon/Workspace/MyMacConfig"
-alias learngo="cd ~/Workspace/Learn-go"
+alias adcamp="cd ~/Workspace/GO-Advanced-training-camp"
 
 ### Custom aliases
 alias updatez="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
