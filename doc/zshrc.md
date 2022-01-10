@@ -6,7 +6,11 @@ export GOPATH=/Users/linonon/go
 export GOROOT=/usr/local/go
 export GOPRIVATE="talent.com/server"
 
+### Brew
+export BREW=/usr/local/bin
+
 ### PATH
+export PATH=$GOROOT/bin:$BREW:$PATH
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/Cellar/mysql@5.7/5.7.36/bin
 
@@ -29,12 +33,14 @@ alias vimz="vim ~/.zshrc"
 alias souz="source ~/.zshrc"
 alias vimv="vim ~/.vimrc"
 alias c.="code ."
-alias c.e="code . && exit"
+alias ce="code . && exit"
 
 ### CD aliases
 alias cdw="cd ~/Workspace"
-alias mymacconfig="cd /Users/linonon/Workspace/MyMacConfig"
+alias mmc="cd /Users/linonon/Workspace/MyMacConfig"
 alias adcamp="cd ~/Workspace/GO-Advanced-training-camp"
+alias lgg="cd ~/Workspace/Learn-Go-with-Github"
+alias lcg="cd ~/Workspace/leetcode-go-linonon"
 
 ### Custom aliases
 alias updatez="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
@@ -51,6 +57,7 @@ alias gob="go build ."
 alias gomi="go mod init"
 alias gor="go run ."
 alias gog="go get ."
+alias gov="go version"
 
 ### How to Use
 ### `cp -R ./zshrc.md ~/.zshrc`
