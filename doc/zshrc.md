@@ -7,10 +7,10 @@ export GOROOT=/usr/local/go
 export GOPRIVATE="talent.com/server"
 
 ### Brew
-export BREW=/usr/local/bin
+export BREW=/usr/local
 
 ### PATH
-export PATH=$GOROOT/bin:$BREW:$PATH
+export PATH=$PATH:$GOROOT/bin:$BREW/bin:
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/Cellar/mysql@5.7/5.7.36/bin
 
