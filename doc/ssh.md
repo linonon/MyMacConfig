@@ -6,7 +6,7 @@
 2. Run ssh-agent
     - (If not MacOS) eval "$(ssh-agent -s)"
 
-3. Agent add ssh-key
+3. Agent add ssh-key (If got "Permission denied")
     - `ssh-add` or `ssh-add ~/.ssh/id_rsa"`
 
 4. Git setting ssh-key

@@ -23,7 +23,7 @@ ZSH_THEME="robbyrussell"
 ### Add wisely, as too many plugins slow down shell startup.
 ### std: $ZSH/plugins; custom: $ZSH_CUTSOM/plugins/
 ### plugins=(git)
-plugins=(cdgame)
+### plugins=(cdgame)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,7 +41,6 @@ alias mmc="cd /Users/linonon/Workspace/MyMacConfig"
 alias adcamp="cd ~/Workspace/GO-Advanced-training-camp"
 alias lgg="cd ~/Workspace/Learn-Go-with-Github"
 alias lcg="cd ~/Workspace/leetcode-go-linonon"
-alias tss="cd ~/Workspace/technical-summary-sharing"
 
 ### Custom aliases
 alias updatez="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
