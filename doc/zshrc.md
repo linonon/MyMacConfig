@@ -40,7 +40,7 @@ alias cdw="cd ~/Workspace"
 alias mmc="cd /Users/linonon/Workspace/MyMacConfig"
 alias adcamp="cd ~/Workspace/GO-Advanced-training-camp"
 alias lgg="cd ~/Workspace/Learn-Go-with-Github"
-alias lcg="cd ~/Workspace/leetcode-go-TDD"
+alias lcg="cd ~/Workspace/leetcode-go-linonon"
 alias tss="cd ~/Workspace/technical-summary-sharing"
 
 ### Custom aliases
