@@ -2,16 +2,16 @@
 
 ## Light Modify
 
-![LightModify](/Alfred/Theme/LightModify.png)
+![LightModify](/Alfred/Themes/LightModify.png)
 
 ## Linonon Nave
 
-![LinononNave](/Alfred/Theme/linononave.png)
+![LinononNave](/Alfred/Themes/linononave.png)
 
 ## Morden Dark Modify
 
-![MordenDarkModify](/Alfred/Theme/MordenDarkModify.png)
+![MordenDarkModify](/Alfred/Themes/MordenDarkModify.png)
 
 ## PurpleTheme
 
-![PurpleTheme](/Alfred/Theme/PurpleTheme.png)
+![PurpleTheme](/Alfred/Themes/PurpleTheme.png)
