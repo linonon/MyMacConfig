@@ -46,7 +46,7 @@ alias tss="cd ~/Workspace/technical-summary-sharing"
 ### Custom aliases
 alias updatez="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
 alias updatev="cp -R ~/.vimrc ~/Workspace/MyMacConfig/doc/vimrc.md"
-alias update-vscodetheme="cp -R ~/.vscode/extensions/github.github-vscode-theme-6.0.0/themes/dark-default.json ~/Workspace/MyMacConfig/vscode/github-theme/dark-defalut.json"
+alias update-vscodetheme="cp -R ~/.vscode/extensions/github.github-vscode-theme-6.0.0/themes/dark-default.json ~/Workspace/MyMacConfig/vscode/github-theme/dark-default.json"
 alias pushc="updatez && updatev && update-vscodetheme && cd ~/Workspace/MyMacConfig && git pull && git add . && git commit -m 'DOC: Update Mac config' && git push && cd -"
 
 ### DB aliases

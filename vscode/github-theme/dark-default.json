@@ -194,7 +194,7 @@
         "entity"
       ],
       "settings": {
-        "foreground": "#79c0ff"
+        "foreground": "#D09B66"
       }
     },
     {
@@ -204,7 +204,7 @@
         "meta.definition.variable"
       ],
       "settings": {
-        "foreground": "#ffa657"
+        "foreground": "#a5d6ff"
       }
     },
     {
