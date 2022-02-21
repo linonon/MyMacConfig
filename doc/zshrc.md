@@ -9,10 +9,13 @@ export GOPRIVATE="talent.com/server"
 ### Brew
 export BREW=/usr/local
 
+### MYSQL
+export MYSQL=/usr/local/Cellar/mysql@5.7/5.7.37/bin
+
 ### PATH
-export PATH=$PATH:$GOROOT/bin:$BREW/bin:
+export PATH=$PATH:$GOROOT/bin:$BREW/bin
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/usr/local/Cellar/mysql@5.7/5.7.36/bin
+export PATH=$PATH:$MYSQL
 
 ### ZSH PATH
 export ZSH="/Users/linonon/.oh-my-zsh"
@@ -34,6 +37,7 @@ alias souz="source ~/.zshrc"
 alias vimv="vim ~/.vimrc"
 alias c.="code ."
 alias ce="code . && exit"
+alias psag="ps aux | grep"
 
 ### CD aliases
 alias cdw="cd ~/Workspace"
@@ -52,9 +56,11 @@ alias pushc="upload-zshrc && upload-vimrc && upload-vscodetheme && cd ~/Workspac
 alias download-vscodetheme="cp -R ~/Workspace/MyMacConfig/vscode/github-theme/dark-default.json ~/.vscode/extensions/github.github-vscode-theme-6.0.0/themes/dark-default.json"
 
 ### DB aliases
-alias start-mongo="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
+alias start-mongo-notbackground="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
+alias start-mongo="mongod --fork --port 27017 --dbpath /Users/linonon/Environment/data/db --logpath=/Users/linonon/Environment/data/db/log --logappend"
 alias start-mysql="mysql.server start"
-alias start-redis="redis-server"
+alias start-redis-notbackground="redis-server"
+alias start-redis="redis-server --daemonize yes"
 
 ### Go aliases
 alias gob="go build ."
