@@ -61,13 +61,25 @@ alias start-mongo="mongod --fork --port 27017 --dbpath /Users/linonon/Environmen
 alias start-mysql="mysql.server start"
 alias start-redis-notbackground="redis-server"
 alias start-redis="redis-server --daemonize yes"
+alias start-server="start-mongo && start-redis && start-mysql"
 
 ### Go aliases
 alias gob="go build ."
 alias gomi="go mod init"
+alias gomt="go mod tidy"
 alias gor="go run ."
 alias gog="go get ."
 alias gov="go version"
 
+
 ### How to Use
 ### `cp -R ./zshrc.md ~/.zshrc`
+
+### The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/linonon/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/linonon/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+### The next line enables shell command completion for gcloud.
+if [ -f '/Users/linonon/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/linonon/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+### gcloud alias
+alias gjp="gcloud compute ssh --zone "asia-northeast1-b" "instance-2"  --project "conductive-set-341607""
