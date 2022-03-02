@@ -61,7 +61,7 @@ alias start-mongo="mongod --fork --port 27017 --dbpath /Users/linonon/Environmen
 alias start-mysql="mysql.server start"
 alias start-redis-notbackground="redis-server"
 alias start-redis="redis-server --daemonize yes"
-alias start-server="start-mongo && start-redis && start-mysql"
+alias start-db="start-mongo && start-redis && start-mysql"
 
 ### Go aliases
 alias gob="go build ."
