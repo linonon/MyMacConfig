@@ -38,11 +38,14 @@ alias vimv="vim ~/.vimrc"
 alias c.="code ."
 alias ce="code . && exit"
 alias psag="ps aux | grep"
+alias cm7="chmod 777"
 
 ### CD aliases
 alias cdw="cd ~/Workspace"
+alias cdg="cd ~/Workspace/game"
 alias mmc="cd /Users/linonon/Workspace/MyMacConfig"
 alias adcamp="cd ~/Workspace/GO-Advanced-training-camp"
+alias cncamp="cd ~/Workspace/Cloud-native-gocamp"
 alias lgg="cd ~/Workspace/Learn-Go-with-Github"
 alias lcg="cd ~/Workspace/leetcode-go-TDD"
 alias tss="cd ~/Workspace/technical-summary-sharing"
@@ -50,16 +53,14 @@ alias tss="cd ~/Workspace/technical-summary-sharing"
 ### Custom aliases
 alias upload-zshrc="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
 alias upload-vimrc="cp -R ~/.vimrc ~/Workspace/MyMacConfig/doc/vimrc.md"
-alias upload-vscodetheme="cp -R ~/.vscode/extensions/github.github-vscode-theme-6.0.0/themes/dark-default.json ~/Workspace/MyMacConfig/vscode/github-theme/dark-default.json"
-alias pushc="upload-zshrc && upload-vimrc && upload-vscodetheme && cd ~/Workspace/MyMacConfig && git pull && git add . && git commit -m 'DOC: Update Mac config' && git push && cd -"
+alias pushc="upload-zshrc && upload-vimrc && cd ~/Workspace/MyMacConfig && git pull && git add . && git commit -m 'DOC: Update Mac config' && git push && cd -"
 
-alias download-vscodetheme="cp -R ~/Workspace/MyMacConfig/vscode/github-theme/dark-default.json ~/.vscode/extensions/github.github-vscode-theme-6.0.0/themes/dark-default.json"
 
 ### DB aliases
-alias start-mongo-notbackground="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
+alias start-mongo-notdeamon="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
 alias start-mongo="mongod --fork --port 27017 --dbpath /Users/linonon/Environment/data/db --logpath=/Users/linonon/Environment/data/db/log --logappend"
 alias start-mysql="mysql.server start"
-alias start-redis-notbackground="redis-server"
+alias start-redis-notdeamon="redis-server"
 alias start-redis="redis-server --daemonize yes"
 alias start-db="start-mongo && start-redis && start-mysql"
 
@@ -71,15 +72,21 @@ alias gor="go run ."
 alias gog="go get ."
 alias gov="go version"
 
+### Docker aliases
+alias d="docker"
+alias dps="docker ps"
+alias datt="docker attach"
+alias dr="docker run"
+alias di="docker images"
 
 ### How to Use
 ### `cp -R ./zshrc.md ~/.zshrc`
 
-### The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/linonon/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/linonon/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-### The next line enables shell command completion for gcloud.
-if [ -f '/Users/linonon/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/linonon/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 ### gcloud alias
 alias gjp="gcloud compute ssh --zone "asia-northeast1-b" "instance-2"  --project "conductive-set-341607""
+
+### The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/linonon/Workspace/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/linonon/Workspace/google-cloud-sdk/path.zsh.inc'; fi
+
+### The next line enables shell command completion for gcloud.
+if [ -f '/Users/linonon/Workspace/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/linonon/Workspace/google-cloud-sdk/completion.zsh.inc'; fi
