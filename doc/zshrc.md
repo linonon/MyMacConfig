@@ -62,7 +62,7 @@ alias start-mongo="mongod --fork --port 27017 --dbpath /Users/linonon/Environmen
 alias start-mysql="mysql.server start"
 alias start-redis-notdeamon="redis-server"
 alias start-redis="redis-server --daemonize yes"
-alias start-db="start-mongo && start-redis && start-mysql"
+alias start-db="echo 'Starting mongodb...' && start-mongo && echo 'Starting redis...' && start-redis && echo 'Starting mysql...' && start-mysql"
 
 ### Go aliases
 alias gob="go build ."
@@ -78,6 +78,10 @@ alias dps="docker ps"
 alias datt="docker attach"
 alias dr="docker run"
 alias di="docker images"
+alias dcon="docker container"
+
+### Python aliases
+alias python="python3"
 
 ### How to Use
 ### `cp -R ./zshrc.md ~/.zshrc`
