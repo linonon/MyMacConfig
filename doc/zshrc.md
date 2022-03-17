@@ -2,8 +2,8 @@
 export PROTOBUF=/usr/local/Cellar/protobuf
 
 ### Go env
-export GOPATH=/Users/linonon/go 
-export GOROOT=/usr/local/go
+export GOPATH=/Users/linonon/go
+export GOROOT=/usr/local/go-1.17
 export GOPRIVATE="talent.com/server"
 
 ### Brew
@@ -53,7 +53,16 @@ alias tss="cd ~/Workspace/technical-summary-sharing"
 ### Custom aliases
 alias upload-zshrc="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
 alias upload-vimrc="cp -R ~/.vimrc ~/Workspace/MyMacConfig/doc/vimrc.md"
-alias pushc="upload-zshrc && upload-vimrc && cd ~/Workspace/MyMacConfig && git pull && git add . && git commit -m 'DOC: Update Mac config' && git push && cd -"
+### "upload-zshrc && upload-vimrc && cd ~/Workspace/MyMacConfig && git pull && git add . && git commit -m 'DOC: Update Mac config' && git push && cd -"
+function pushc() {
+	upload-zshrc
+	upload-vimrc
+	cd ~/Workspace/MyMacConfig 
+	git pull && git add . 
+	git commit -m 'DOC: Update Mac config' 
+	git push 
+	cd -
+}
 
 
 ### DB aliases
@@ -71,6 +80,7 @@ alias gomt="go mod tidy"
 alias gor="go run ."
 alias gog="go get ."
 alias gov="go version"
+alias gochver="sudo ln /usr/local/'$'"
 
 ### Docker aliases
 alias d="docker"
@@ -81,7 +91,7 @@ alias di="docker images"
 alias dcon="docker container"
 
 ### Python aliases
-alias python="python3"
+alias py="python3"
 
 ### How to Use
 ### `cp -R ./zshrc.md ~/.zshrc`
