@@ -3,7 +3,7 @@ export PROTOBUF=/usr/local/Cellar/protobuf
 
 ### Go env
 export GOPATH=/Users/linonon/go
-export GOROOT=/usr/local/go-1.17
+export GOROOT=/usr/local/go
 export GOPRIVATE="talent.com/server"
 
 ### Brew
@@ -13,9 +13,10 @@ export BREW=/usr/local
 export MYSQL=/usr/local/Cellar/mysql@5.7/5.7.37/bin
 
 ### PATH
-export PATH=$PATH:$GOROOT/bin:$BREW/bin
+export PATH=$PATH:$BREW/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$MYSQL
+
 
 ### ZSH PATH
 export ZSH="/Users/linonon/.oh-my-zsh"
@@ -32,6 +33,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### System aliases
 alias cl="clear && printf '\e[3J'"
+alias clpath="export PATH=$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
 alias vimz="vim ~/.zshrc"
 alias souz="source ~/.zshrc"
 alias vimv="vim ~/.vimrc"
@@ -53,7 +55,6 @@ alias tss="cd ~/Workspace/technical-summary-sharing"
 ### Custom aliases
 alias upload-zshrc="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
 alias upload-vimrc="cp -R ~/.vimrc ~/Workspace/MyMacConfig/doc/vimrc.md"
-### "upload-zshrc && upload-vimrc && cd ~/Workspace/MyMacConfig && git pull && git add . && git commit -m 'DOC: Update Mac config' && git push && cd -"
 function pushc() {
 	upload-zshrc
 	upload-vimrc
@@ -64,14 +65,26 @@ function pushc() {
 	cd -
 }
 
-
 ### DB aliases
 alias start-mongo-notdeamon="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
 alias start-mongo="mongod --fork --port 27017 --dbpath /Users/linonon/Environment/data/db --logpath=/Users/linonon/Environment/data/db/log --logappend"
 alias start-mysql="mysql.server start"
 alias start-redis-notdeamon="redis-server"
 alias start-redis="redis-server --daemonize yes"
-alias start-db="echo 'Starting mongodb...' && start-mongo && echo 'Starting redis...' && start-redis && echo 'Starting mysql...' && start-mysql"
+function start-db() {
+	echo '\nStarting mongodb...\n' 
+	start-mongo 
+	echo '\nStarting redis...\n' 
+	start-redis 
+	echo '\nStarting mysql...\n' 
+	start-mysql
+}
+function stop-db() {
+	kill $(lsof -t -i:6379)
+	kill $(lsof -t -i:3306)
+	kill $(lsof -t -i:27017)
+}
+
 
 ### Go aliases
 alias gob="go build ."
@@ -80,7 +93,18 @@ alias gomt="go mod tidy"
 alias gor="go run ."
 alias gog="go get ."
 alias gov="go version"
-alias gochver="sudo ln /usr/local/'$'"
+alias gobrewv="echo $(cd /usr/local/Cellar/go; ls)"
+function goch() {
+	local godir="/usr/local/bin/go"
+
+	if [[ $1 == 1.17 || $1 == 1.18 ]]; then
+		sudo ln -fsn /usr/local/go$1/bin/go $godir
+	elif [[ $1 == "brew" ]]; then
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/go $godir
+	else
+		echo "go@$1 is not installed"
+	fi
+}
 
 ### Docker aliases
 alias d="docker"
@@ -92,6 +116,7 @@ alias dcon="docker container"
 
 ### Python aliases
 alias py="python3"
+alias pi="pip3"
 
 ### How to Use
 ### `cp -R ./zshrc.md ~/.zshrc`
