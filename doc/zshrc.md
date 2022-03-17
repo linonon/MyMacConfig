@@ -72,17 +72,14 @@ alias start-mysql="mysql.server start"
 alias start-redis-notdeamon="redis-server"
 alias start-redis="redis-server --daemonize yes"
 function start-db() {
-	echo '\nStarting mongodb...\n' 
 	start-mongo 
-	echo '\nStarting redis...\n' 
 	start-redis 
-	echo '\nStarting mysql...\n' 
 	start-mysql
 }
 function stop-db() {
-	kill $(lsof -t -i:6379)
+	redis-cli shutdown
 	kill $(lsof -t -i:3306)
-	kill $(lsof -t -i:27017)
+	mysql.server stop
 }
 
 
@@ -95,12 +92,18 @@ alias gog="go get ."
 alias gov="go version"
 alias gobrewv="echo $(cd /usr/local/Cellar/go; ls)"
 function goch() {
-	local godir="/usr/local/bin/go"
+	local go="/usr/local/bin/go"
+	local gofmt="/usr/local/bin/gofmt"
+	local goroot="/usr/local/go"
 
 	if [[ $1 == 1.17 || $1 == 1.18 ]]; then
-		sudo ln -fsn /usr/local/go$1/bin/go $godir
+		sudo ln -fsn /usr/local/go$1/bin/go $go
+		sudo ln -fsn /usr/local/go$1/bin/gofmt $gofmt
+		sudo ln -fsn /usr/local/go$1 $goroot
 	elif [[ $1 == "brew" ]]; then
-		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/go $godir
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/go $go
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/gofmt $gofmt
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv) $goroot
 	else
 		echo "go@$1 is not installed"
 	fi
