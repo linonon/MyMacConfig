@@ -53,6 +53,7 @@ alias cncamp="cd ~/Workspace/Cloud-native-gocamp"
 alias lgg="cd ~/Workspace/Learn-Go-with-Github"
 alias lcg="cd ~/Workspace/leetcode-go-TDD"
 alias tss="cd ~/Workspace/technical-summary-sharing"
+alias lp="cd ~/Workspace/learning-process"
 
 ### Custom aliases
 alias upload-zshrc="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
@@ -96,16 +97,15 @@ alias gobrewv="echo $(cd /usr/local/Cellar/go; ls)"
 function goch() {
 	local go="/usr/local/bin/go"
 	local gofmt="/usr/local/bin/gofmt"
-	local goroot="/usr/local/go"
 
 	if [[ $1 == 1.17 || $1 == 1.18 ]]; then
 		sudo ln -fsn /usr/local/go$1/bin/go $go
 		sudo ln -fsn /usr/local/go$1/bin/gofmt $gofmt
-		sudo ln -fsn /usr/local/go$1 $goroot
+		sudo ln -fsn /usr/local/go$1 $GOROOT
 	elif [[ $1 == "brew" ]]; then
 		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/go $go
 		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/gofmt $gofmt
-		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv) $goroot
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv) $GOROOT
 	else
 		echo "go version: $1 not found"
 	fi
@@ -118,6 +118,9 @@ alias datt="docker attach"
 alias dr="docker run"
 alias di="docker images"
 alias dcon="docker container"
+function dex() {
+	docker exec -it $1 zsh
+}
 
 ### Python aliases
 alias py="python3"
