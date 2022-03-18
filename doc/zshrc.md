@@ -105,7 +105,7 @@ function goch() {
 		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/gofmt $gofmt
 		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv) $goroot
 	else
-		echo "go@$1 is not installed"
+		echo "go version: $1 not found"
 	fi
 }
 
