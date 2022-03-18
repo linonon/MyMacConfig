@@ -27,7 +27,9 @@ ZSH_THEME="robbyrussell"
 ### Add wisely, as too many plugins slow down shell startup.
 ### std: $ZSH/plugins; custom: $ZSH_CUTSOM/plugins/
 ### plugins=(git)
-plugins=(cdgame)
+plugins=(
+	cdgame
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -66,14 +68,14 @@ function pushc() {
 }
 
 ### DB aliases
-alias start-mongo-notdeamon="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
-alias start-mongo="mongod --fork --port 27017 --dbpath /Users/linonon/Environment/data/db --logpath=/Users/linonon/Environment/data/db/log --logappend"
+alias start-redis-notdaemon="redis-server"
+alias start-mongo-notdaemon="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
+alias start-mongo-daemon="mongod --fork --port 27017 --dbpath /Users/linonon/Environment/data/db --logpath=/Users/linonon/Environment/data/db/log --logappend"
+alias start-redis-daemon="redis-server --daemonize yes"
 alias start-mysql="mysql.server start"
-alias start-redis-notdeamon="redis-server"
-alias start-redis="redis-server --daemonize yes"
 function start-db() {
-	start-mongo 
-	start-redis 
+	start-mongo-daemon 
+	start-redis-daemon 
 	start-mysql
 }
 function stop-db() {
@@ -119,7 +121,7 @@ alias dcon="docker container"
 
 ### Python aliases
 alias py="python3"
-alias pi="pip3"
+alias pip="pip3"
 
 ### How to Use
 ### `cp -R ./zshrc.md ~/.zshrc`
