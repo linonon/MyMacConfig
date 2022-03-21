@@ -67,6 +67,15 @@ function pushc() {
 	git push 
 	cd -
 }
+function gpacp() {
+	git pull && git add .
+	if [[ $1 != "" ]]; then
+		git commit -m $1
+	else 
+		git commit -m "Push without message"
+	fi	
+	git push
+}
 
 ### DB aliases
 alias start-redis-notdaemon="redis-server"
@@ -114,12 +123,15 @@ function goch() {
 ### Docker aliases
 alias d="docker"
 alias dps="docker ps"
-alias datt="docker attach"
 alias dr="docker run"
-alias di="docker images"
+alias dim="docker images"
 alias dcon="docker container"
 function dex() {
-	docker exec -it $1 zsh
+	if [[ $2 != "" ]]; then
+		docker exec -it $1 $2
+	else
+		docker exec -it $1 zsh
+	fi
 }
 
 ### Python aliases
