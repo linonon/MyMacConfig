@@ -54,6 +54,7 @@ alias lgg="cd ~/Workspace/Learn-Go-with-Github"
 alias lcg="cd ~/Workspace/leetcode-go-TDD"
 alias tss="cd ~/Workspace/technical-summary-sharing"
 alias lp="cd ~/Workspace/learning-process"
+alias gc="cd ~/Workspace/go-combat"
 
 ### Custom aliases
 alias upload-zshrc="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
@@ -135,8 +136,13 @@ function dex() {
 }
 
 ### Python aliases
-alias py="python3"
-alias pip="pip3"
+alias py="/usr/local/Cellar/python@3.9/3.9.12/bin/python3"
+alias pip="/usr/local/Cellar/python@3.9/3.9.12/bin/pip3"
+
+export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 
 ### How to Use
 ### `cp -R ./zshrc.md ~/.zshrc`
