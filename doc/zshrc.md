@@ -47,7 +47,7 @@ alias cm7="chmod 777"
 ### CD aliases
 alias cdw="cd ~/Workspace"
 alias cdg="cd ~/Workspace/game"
-alias mmc="cd /Users/linonon/Workspace/MyMacConfig"
+alias mmc="cd ~/Workspace/MyMacConfig"
 alias adcamp="cd ~/Workspace/GO-Advanced-training-camp"
 alias cncamp="cd ~/Workspace/Cloud-native-gocamp"
 alias lgg="cd ~/Workspace/Learn-Go-with-Github"
@@ -62,7 +62,7 @@ alias upload-vimrc="cp -R ~/.vimrc ~/Workspace/MyMacConfig/doc/vimrc.md"
 function pushc() {
 	upload-zshrc
 	upload-vimrc
-	cd ~/Workspace/MyMacConfig 
+	mmc
 	git pull && git add . 
 	git commit -m 'DOC: Update Mac config' 
 	git push 
