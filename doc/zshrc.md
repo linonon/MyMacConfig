@@ -1,15 +1,19 @@
-### Protobuf
+### Export
 export PROTOBUF=/usr/local/Cellar/protobuf
 
-### Go env
 export GOPATH=/Users/linonon/go
 export GOROOT=/usr/local/go
 export GOPRIVATE="talent.com/server"
 
-### Brew
 export BREW=/usr/local
 
+export TK="/usr/local/opt/tcl-tk/bin"
+export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
+
 ### PATH
+export PATH=TK:$PATH
 export PATH=$BREW/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 
@@ -88,6 +92,49 @@ alias stop mysql="mysql.server stop"
 
 alias start-db="start-mongo-daemon && start-redis-daemon && start-mysql"
 alias stop-db="stop-redis && stop-mongo && stop-mysql"
+
+### Go aliases
+alias gob="go build ."
+alias gomi="go mod init"
+alias gomt="go mod tidy"
+alias gor="go run ."
+alias gog="go get ."
+alias gov="go version"
+alias gobrewv="echo $(cd /usr/local/Cellar/go; ls)"
+function goch() {
+	local go="/usr/local/bin/go"
+	local gofmt="/usr/local/bin/gofmt"
+
+	if [[ $1 == 1.17 || $1 == 1.18 ]]; then
+		sudo ln -fsn /usr/local/go$1/bin/go $go
+		sudo ln -fsn /usr/local/go$1/bin/gofmt $gofmt
+		sudo ln -fsn /usr/local/go$1 $GOROOT
+	elif [[ $1 == "brew" ]]; then
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/go $go
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/gofmt $gofmt
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv) $GOROOT
+	else
+		echo "go version: '$1' not found"
+	fi
+}
+
+### Docker aliases
+alias d="docker"
+alias dps="docker ps"
+alias dr="docker run"
+alias dim="docker images"
+alias dcon="docker container"
+function dex() {
+	if [[ $2 != "" ]]; then
+		docker exec -it $1 $2
+	else
+		docker exec -it $1 zsh
+	fi
+}
+
+### Python aliases
+alias py="/usr/local/Cellar/python@3.9/3.9.12/bin/python3"
+alias pip="/usr/local/Cellar/python@3.9/3.9.12/bin/pip3"
 
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
