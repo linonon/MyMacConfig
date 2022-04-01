@@ -9,13 +9,9 @@ export GOPRIVATE="talent.com/server"
 ### Brew
 export BREW=/usr/local
 
-### MYSQL
-export MYSQL=/usr/local/Cellar/mysql@5.7/5.7.37/bin
-
 ### PATH
-export PATH=$PATH:$BREW/bin
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$MYSQL
+export PATH=$BREW/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
 
 
 ### ZSH PATH
@@ -43,6 +39,9 @@ alias c.="code ."
 alias ce="code . && exit"
 alias psag="ps aux | grep"
 alias cm7="chmod 777"
+alias sls="screen -ls"
+alias sr="screen -r"
+alias llg="ll | grep"
 
 ### CD aliases
 alias cdw="cd ~/Workspace"
@@ -63,9 +62,7 @@ function pushc() {
 	upload-zshrc
 	upload-vimrc
 	mmc
-	git pull && git add . 
-	git commit -m 'DOC: Update Mac config' 
-	git push 
+	gpacp 'DOC: Update Mac config'
 	cd -
 }
 function gpacp() {
@@ -79,65 +76,18 @@ function gpacp() {
 }
 
 ### DB aliases
-alias start-redis-notdaemon="redis-server"
-alias start-mongo-notdaemon="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
+alias start-redis-no-daemon="redis-server"
+alias start-mongo-no-daemon="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
 alias start-mongo-daemon="mongod --fork --port 27017 --dbpath /Users/linonon/Environment/data/db --logpath=/Users/linonon/Environment/data/db/log --logappend"
 alias start-redis-daemon="redis-server --daemonize yes"
 alias start-mysql="mysql.server start"
-function start-db() {
-	start-mongo-daemon 
-	start-redis-daemon 
-	start-mysql
-}
-function stop-db() {
-	redis-cli shutdown
-	kill $(lsof -t -i:3306)
-	mysql.server stop
-}
 
+alias stop-redis="redis-cli shutdown"
+alias stop-mongo="kill $(lsof -t -i:3306)"
+alias stop mysql="mysql.server stop"	
 
-### Go aliases
-alias gob="go build ."
-alias gomi="go mod init"
-alias gomt="go mod tidy"
-alias gor="go run ."
-alias gog="go get ."
-alias gov="go version"
-alias gobrewv="echo $(cd /usr/local/Cellar/go; ls)"
-function goch() {
-	local go="/usr/local/bin/go"
-	local gofmt="/usr/local/bin/gofmt"
-
-	if [[ $1 == 1.17 || $1 == 1.18 ]]; then
-		sudo ln -fsn /usr/local/go$1/bin/go $go
-		sudo ln -fsn /usr/local/go$1/bin/gofmt $gofmt
-		sudo ln -fsn /usr/local/go$1 $GOROOT
-	elif [[ $1 == "brew" ]]; then
-		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/go $go
-		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/gofmt $gofmt
-		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv) $GOROOT
-	else
-		echo "go version: $1 not found"
-	fi
-}
-
-### Docker aliases
-alias d="docker"
-alias dps="docker ps"
-alias dr="docker run"
-alias dim="docker images"
-alias dcon="docker container"
-function dex() {
-	if [[ $2 != "" ]]; then
-		docker exec -it $1 $2
-	else
-		docker exec -it $1 zsh
-	fi
-}
-
-### Python aliases
-alias py="/usr/local/Cellar/python@3.9/3.9.12/bin/python3"
-alias pip="/usr/local/Cellar/python@3.9/3.9.12/bin/pip3"
+alias start-db="start-mongo-daemon && start-redis-daemon && start-mysql"
+alias stop-db="stop-redis && stop-mongo && stop-mysql"
 
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
