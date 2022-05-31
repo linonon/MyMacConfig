@@ -1,5 +1,11 @@
+export USER_NAME=oliver
+export SSH_KEY=~/.ssh/id_rsa
+export TELEGRAM_TOKEN="5130690963:AAGNv_DU-_aFB_FoCqlksrn5WhyElxB6WOk"
+
+
 ### Export
 export PROTOBUF=/usr/local/Cellar/protobuf
+export PYTHON3=/Users/linonon/Library/Python/3.8
 
 export GOPATH=/Users/linonon/go
 export GOROOT=/usr/local/go
@@ -13,9 +19,10 @@ export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
 export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 
 ### PATH
-export PATH=TK:$PATH
+export PATH=$TK:$PATH
 export PATH=$BREW/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
+export PATH=$PYTHON3/bin:$PATH
 
 
 ### ZSH PATH
@@ -46,6 +53,7 @@ alias cm7="chmod 777"
 alias sls="screen -ls"
 alias sr="screen -r"
 alias llg="ll | grep"
+alias autocommit="sh ~/Workspace/go-combat/timed-task/sh/autocommit.sh"
 
 ### CD aliases
 alias cdw="cd ~/Workspace"
@@ -79,6 +87,12 @@ function gpacp() {
 	git push
 }
 
+### Nginx aliases
+alias ng="nginx"
+alias ngs="nginx -s stop"
+alias ngr="nginx -s reload"
+alias ngt="nginx -t"
+
 ### DB aliases
 alias start-redis-no-daemon="redis-server"
 alias start-mongo-no-daemon="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
@@ -87,11 +101,11 @@ alias start-redis-daemon="redis-server --daemonize yes"
 alias start-mysql="mysql.server start"
 
 alias stop-redis="redis-cli shutdown"
-alias stop-mongo="kill $(lsof -t -i:3306)"
-alias stop mysql="mysql.server stop"	
+alias stop-mongo="kill $(lsof -t -i:27017)"
+alias stop-mysql="mysql.server stop"	
 
-alias start-db="start-mongo-daemon && start-redis-daemon && start-mysql"
-alias stop-db="stop-redis && stop-mongo && stop-mysql"
+alias start-db="start-mongo-daemon ; start-redis-daemon ; start-mysql"
+alias stop-db="stop-redis ; stop-mongo ; stop-mysql"
 
 ### Go aliases
 alias gob="go build ."
@@ -116,6 +130,8 @@ function goch() {
 	else
 		echo "go version: '$1' not found"
 	fi
+
+	gov
 }
 
 ### Docker aliases
@@ -133,8 +149,8 @@ function dex() {
 }
 
 ### Python aliases
-alias py="/usr/local/Cellar/python@3.9/3.9.12/bin/python3"
-alias pip="/usr/local/Cellar/python@3.9/3.9.12/bin/pip3"
+alias py="/usr/bin/python3"
+alias pip="/usr/bin/pip3"
 
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
