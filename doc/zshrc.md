@@ -54,7 +54,7 @@ alias sls="screen -ls"
 alias sr="screen -r"
 alias llg="ll | grep"
 alias autocommit="sh ~/Workspace/go-combat/timed-task/sh/autocommit.sh"
-alias pwdd="pwd | clipcopy"
+alias pwdd="pwd && pwd | clipcopy"
 
 ### CD aliases
 alias cdw="cd ~/Workspace"
