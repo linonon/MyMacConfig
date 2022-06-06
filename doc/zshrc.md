@@ -27,9 +27,8 @@ export PATH=$PYTHON3/bin:$PATH
 
 ### ZSH PATH
 export ZSH="/Users/linonon/.oh-my-zsh"
-
-### ZSH theme
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+# ZSH_THEME="arrow"
 
 ### Add wisely, as too many plugins slow down shell startup.
 ### std: $ZSH/plugins; custom: $ZSH_CUTSOM/plugins/
@@ -158,6 +157,8 @@ export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
 export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
 export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 
+
+
 ### How to Use
 ### `cp -R ./zshrc.md ~/.zshrc`
 
@@ -169,3 +170,19 @@ if [ -f '/Users/linonon/Workspace/google-cloud-sdk/path.zsh.inc' ]; then . '/Use
 
 ### The next line enables shell command completion for gcloud.
 if [ -f '/Users/linonon/Workspace/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/linonon/Workspace/google-cloud-sdk/completion.zsh.inc'; fi
+
+### New line for input
+function prompt_context(){}
+function prompt_end() {
+  if [[ -n $CURRENT_BG ]]; then
+      print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+  else
+      print -n "%{%k%}"
+  fi
+
+  print -n "%{%f%}"
+  CURRENT_BG=''
+
+  #Adds the new line and ➜ as the start character.
+  printf "\n ▶︎";
+}
