@@ -29,12 +29,16 @@ export PATH=$PYTHON3/bin:$PATH
 export ZSH="/Users/linonon/.oh-my-zsh"
 ZSH_THEME="agnoster"
 # ZSH_THEME="arrow"
+# ZSH_THEME="jonathan"
 
 ### Add wisely, as too many plugins slow down shell startup.
 ### std: $ZSH/plugins; custom: $ZSH_CUTSOM/plugins/
 ### plugins=(git)
 plugins=(
 	cdgame
+	z
+	zsh-syntax-highlighting
+	zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
