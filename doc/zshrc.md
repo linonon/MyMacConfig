@@ -128,9 +128,9 @@ function goch() {
 		sudo ln -fsn /usr/local/go$1/bin/gofmt $gofmt
 		sudo ln -fsn /usr/local/go$1 $GOROOT
 	elif [[ $1 == "brew" ]]; then
-		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/go $go
-		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/bin/gofmt $gofmt
-		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv) $GOROOT
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/libexec/bin/go $go
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/libexec/bin/gofmt $gofmt
+		sudo ln -fsn /usr/local/Cellar/go/$(gobrewv)/libexec $GOROOT
 	else
 		echo "go version: '$1' not found"
 	fi
@@ -175,7 +175,7 @@ if [ -f '/Users/linonon/Workspace/google-cloud-sdk/path.zsh.inc' ]; then . '/Use
 ### The next line enables shell command completion for gcloud.
 if [ -f '/Users/linonon/Workspace/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/linonon/Workspace/google-cloud-sdk/completion.zsh.inc'; fi
 
-### New line for input
+### New line for input (ZSH_THEME: agnoster)
 function prompt_context(){}
 function prompt_end() {
   if [[ -n $CURRENT_BG ]]; then
@@ -188,5 +188,6 @@ function prompt_end() {
   CURRENT_BG=''
 
   #Adds the new line and ➜ as the start character.
-  printf "\n ▶︎";
+  printf "\n(cmd)";
 }
+
