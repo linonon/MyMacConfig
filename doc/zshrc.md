@@ -46,7 +46,9 @@ source $ZSH/oh-my-zsh.sh
 ### System aliases
 alias cl="clear && printf '\e[3J'"
 alias clpath="export PATH=$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
+# alias vim="nvim"
 alias vimz="vim ~/.zshrc"
+# alias nvimz="nvim ~/.zshrc"
 alias souz="source ~/.zshrc"
 alias vimv="vim ~/.vimrc"
 alias c.="code ."
@@ -61,6 +63,7 @@ alias pwdd="pwd && pwd | clipcopy"
 
 ### CD aliases
 alias cdw="cd ~/Workspace"
+alias cdd="cd ~/Downloads"
 alias cdg="cd ~/Workspace/game"
 alias mmc="cd ~/Workspace/MyMacConfig"
 alias adcamp="cd ~/Workspace/GO-Advanced-training-camp"
@@ -78,10 +81,10 @@ function pushc() {
 	upload-zshrc
 	upload-vimrc
 	mmc
-	gpacp 'DOC: Update Mac config'
+	gitpacp 'DOC: Update Mac config'
 	cd -
 }
-function gpacp() {
+function gitpacp() {
 	git pull && git add .
 	if [[ $1 != "" ]]; then
 		git commit -m $1
@@ -137,6 +140,10 @@ function goch() {
 
 	gov
 }
+
+### Go Tools aliases
+alias fishtrack="/Users/linonon/Workspace/fishing-track-analyze/fish-analyze"
+alias fishtracklocal="/Users/linonon/Workspace/fishing-track-analyze/fish-analyze-local"
 
 ### Docker aliases
 alias d="docker"
