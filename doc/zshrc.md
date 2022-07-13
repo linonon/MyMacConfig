@@ -121,6 +121,7 @@ alias stop-db="stop-redis ; stop-mongo ; stop-mysql"
 alias rr="cargo run"
 alias rb="cargo build"
 alias rc="cargo clippy"
+alias rn="cargo new"
 
 ### Go aliases
 alias gob="go build ."
