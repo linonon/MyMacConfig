@@ -10,6 +10,7 @@ export PYTHON3=/Users/linonon/Library/Python/3.8
 export GOPATH=/Users/linonon/go
 export GOROOT=/usr/local/go
 export GOPRIVATE="talent.com/server"
+export CARGOPATH="/Users/linonon/.cargo/bin"
 
 export BREW=/usr/local
 
@@ -22,6 +23,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 export PATH=$TK:$PATH
 export PATH=$BREW/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
+export PATH=$CARGOPATH/bin:$PATH
 export PATH=$PYTHON3/bin:$PATH
 
 
@@ -73,6 +75,7 @@ alias lcg="cd ~/Workspace/leetcode-go-TDD"
 alias tss="cd ~/Workspace/technical-summary-sharing"
 alias lp="cd ~/Workspace/learning-process"
 alias gc="cd ~/Workspace/go-combat"
+alias rl="cd ~/Workspace/Rust-learning"
 
 ### Custom aliases
 alias upload-zshrc="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
@@ -113,6 +116,11 @@ alias stop-mysql="mysql.server stop"
 
 alias start-db="start-mongo-daemon ; start-redis-daemon ; start-mysql"
 alias stop-db="stop-redis ; stop-mongo ; stop-mysql"
+
+### Rust aliases
+alias rr="cargo run"
+alias rb="cargo build"
+alias rc="cargo clippy"
 
 ### Go aliases
 alias gob="go build ."
