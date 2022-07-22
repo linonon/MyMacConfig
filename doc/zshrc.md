@@ -76,6 +76,7 @@ alias tss="cd ~/Workspace/technical-summary-sharing"
 alias lp="cd ~/Workspace/learning-process"
 alias gc="cd ~/Workspace/go-combat"
 alias rl="cd ~/Workspace/Rust-learning"
+alias rbp="cd ~/Workspace/rust-by-practice"
 
 ### Custom aliases
 alias upload-zshrc="cp -R ~/.zshrc ~/Workspace/MyMacConfig/doc/zshrc.md"
