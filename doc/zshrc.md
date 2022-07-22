@@ -5,12 +5,12 @@ export TELEGRAM_TOKEN="5130690963:AAGNv_DU-_aFB_FoCqlksrn5WhyElxB6WOk"
 
 ### Export
 export PROTOBUF=/usr/local/Cellar/protobuf
-export PYTHON3=/Users/linonon/Library/Python/3.8
+export PYTHON3=$HOME/Library/Python/3.8
 
-export GOPATH=/Users/linonon/go
+export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 export GOPRIVATE="talent.com/server"
-export CARGOPATH="/Users/linonon/.cargo/bin"
+export CARGOPATH="$HOME/.cargo/bin"
 
 export BREW=/usr/local
 
@@ -28,7 +28,7 @@ export PATH=$PYTHON3/bin:$PATH
 
 
 ### ZSH PATH
-export ZSH="/Users/linonon/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
 # ZSH_THEME="arrow"
 # ZSH_THEME="jonathan"
@@ -106,8 +106,8 @@ alias ngt="nginx -t"
 
 ### DB aliases
 alias start-redis-no-daemon="redis-server"
-alias start-mongo-no-daemon="mongod --port 27017 --dbpath /Users/linonon/Environment/data/db"
-alias start-mongo-daemon="mongod --fork --port 27017 --dbpath /Users/linonon/Environment/data/db --logpath=/Users/linonon/Environment/data/db/log --logappend"
+alias start-mongo-no-daemon="mongod --port 27017 --dbpath $HOME/Environment/data/db"
+alias start-mongo-daemon="mongod --fork --port 27017 --dbpath $HOME/Environment/data/db --logpath=$HOME/Environment/data/db/log --logappend"
 alias start-redis-daemon="redis-server --daemonize yes"
 alias start-mysql="mysql.server start"
 
@@ -152,8 +152,8 @@ function goch() {
 }
 
 ### Go Tools aliases
-alias fishtrack="/Users/linonon/Workspace/fishing-track-analyze/fish-analyze"
-alias fishtracklocal="/Users/linonon/Workspace/fishing-track-analyze/fish-analyze-local"
+alias fishtrack="$HOME/Workspace/fishing-track-analyze/fish-analyze"
+alias fishtracklocal="$HOME/Workspace/fishing-track-analyze/fish-analyze-local"
 
 ### Docker aliases
 alias d="docker"
